@@ -20,8 +20,10 @@ Do the following:
    HINT: no function required
 */
 
-const age= 21
-if (age>18){console.log (true);} else console.log(false)
+const votingage= 21;
+if (votingage>=18)
+{console.log ('task 1 a:1', true);} 
+else {console.log('task 1 a:1', false);}
 
 /*
 Task 1b - Values (not auto tested)
@@ -35,9 +37,9 @@ Do the following:
    HINT: no function required
 */
 
-let firstThing= 10
-let secondThing= 15
-if (firstThing>secondThing){console.log(firstThing);} else {console.log(firstThing*5);}
+let firstThing= 10;
+let secondThing= 15;
+if (firstThing>secondThing){console.log(firstThing);} else {console.log('task 1 b:', firstThing*5);}
 
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
@@ -50,8 +52,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-let input= "1999"
-console.log(parseInt(input))
+let input= "1999";
+console.log('Task 1 c:' Number(input));
 
 
 /*
@@ -84,7 +86,6 @@ function dogYears(age){
   console.log(dogage)
   /*add your code here*/
 }
-dogYears(1)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -207,13 +208,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(km/*add your code here*/){
   /*add your code here*/
-}
-
-function miles(km){
-  let kmtomiles = km*0.621371
-  console.log(kmtomiles)
+  let kmtomiles = km*0.621371;
+  console.log(kmtomiles);
 }
 
 //Task 5b - Feet to CM

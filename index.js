@@ -20,7 +20,8 @@ Do the following:
    HINT: no function required
 */
 
-
+const age= 21
+if (age>18){console.log (true);} else console.log(false)
 
 /*
 Task 1b - Values (not auto tested)
@@ -34,9 +35,9 @@ Do the following:
    HINT: no function required
 */
 
-
-
-
+let firstThing= 10
+let secondThing= 15
+if (firstThing>secondThing){console.log(firstThing);} else {console.log(firstThing*5);}
 
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
@@ -49,7 +50,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let input= "1999"
+console.log(parseInt(input))
 
 
 /*
@@ -61,9 +63,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
-}
+function multiply(a,b){
+  return a*b
+};
 
 
 
@@ -77,10 +79,12 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(age){
+  let dogage =  7*age;
+  console.log(dogage)
   /*add your code here*/
 }
-
+dogYears(1)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -129,8 +133,8 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(age,weight){
+
 }
 
 
@@ -157,8 +161,38 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 */
 
 function game(user, computer){
-  /*add your code here*/
+  let foodAmount;
+  if (age >= 1){
+    if (pound <= 5){
+      foodAmount = pound * .05;
+    }
+    else if (pound <= 10){
+      foodAmount = pound * .04;
+    }
+    else if (pound <= 15) {
+      foodAmount = pound * .03;
+    }
+    else if (pound > 15) {
+      foodAmount = pound * .02;
+    }
+   }
+   else if (age < 1) {
+    if (age <= .33) {
+      foodAmount = pound * .10;
+    }
+    else if (age <=.5833) {
+      foodAmount = pound * .05;
+    }
+    else if (age < 1) {
+      foodAmount = pound * .04;
+    }
+  }
+
+  return foodAmount;
+
 }
+
+console.log(hungryDog(1,15))
 
 
 
@@ -177,7 +211,10 @@ function miles(/*add your code here*/){
   /*add your code here*/
 }
 
-
+function miles(km){
+  let kmtomiles = km*0.621371
+  console.log(kmtomiles)
+}
 
 //Task 5b - Feet to CM
 /*
@@ -187,8 +224,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(cm/*add your code here*/){
   /*add your code here*/
+  let cmtofeet= cm*0.0328084
+  console.log(cmtofeet)
 }
 
 
@@ -207,9 +246,30 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
+function annoyingSong(bottleamount/*add your code here*/){
       /*add your code here*/
+      let bottles;
+for (counter = bottleamount; counter >= 1; counter = counter - 1) 
+{
+    if (counter == 1) {
+        bottles = 'bottle';
+    } else {
+        bottles = 'bottles';
+    }
+    console.log(counter+" "+bottles+" of beer on the wall.");
+    if (counter < 99) {
+        console.log("");
+        console.log(counter+" "+bottles+" of beer on the wall.");
+    }
+    console.log(counter+" "+bottles+" of beer.");
+    console.log("Take one down.");
+    console.log("Pass it around.");
+    if (counter == 1) {
+        console.log("No bottles of beer on the wall.");
+    }
 }
+}
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -227,9 +287,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
+function grade(gradevalue/*Your Code here */){
 /*Your Code here */
+if (gradevalue>=90){
+   console.log("you got an A");}
+  else if (gradevalue>=80 && gradevalue<=89){
+   console.log("you got an B");}
+  else if (gradevalue>=70 && gradevalue<=79){
+   console.log("you got an C");}
+  else if (gradevalue>=60 && gradevalue<=69){
+   console.log("you got an C");}
+  else if (gradevalue>=50 && gradevalue<=59){
+   console.log("you got an D");}
+  else {console.log("you got an F");}
 }
+
 
 
 

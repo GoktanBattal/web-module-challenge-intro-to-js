@@ -52,8 +52,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-let input= "1999";
-console.log('Task 1 c:' Number(input));
+let input= "1999"; {
+  console.log ("Task 1 c", Number(input));}
 
 
 /*
@@ -69,8 +69,6 @@ function multiply(a,b){
   return a*b
 };
 
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Age in Dog years
@@ -82,11 +80,9 @@ Do the following:
 */
 
 function dogYears(age){
-  let dogage =  7*age;
-  console.log(dogage)
-  /*add your code here*/
+  return 7*age;
 }
-
+console.log("task 2", dogYears)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -134,34 +130,7 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(age,weight){
-
-}
-
-
-
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
-// Rock, Paper, Scissors - Let's play against the computer!
-/*
-Do the following:
-1. Create a new variable that randomly generates the computer's choice, this must not be done inside the function
-2. Use Math.random to determine the computer's choice (Math.random gives a random number between 0 and 1)
-3. Make a conditional that changes the variable to "rock", "paper", or "scissors" based on it's random number
-
-Use the game function below to do the following:
-1. Receive 2 parameters: a string with the user's choice of "rock", "paper", or "scissors" 
-   and the computer's choice of "rock", "paper", or "scissors".
-   Note: make sure the strings are all lower case or it will not pass the test
-2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match these strings below exactly.
- - win should return "you win!"
- - lose should return "you lose!"
- - tie should return "it's a tie"
-
-RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
-*/
-
-function game(user, computer){
+function hungryDog(pound, age){
   let foodAmount;
   if (age >= 1){
     if (pound <= 5){
@@ -193,7 +162,53 @@ function game(user, computer){
 
 }
 
-console.log(hungryDog(1,15))
+
+
+/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
+
+// Rock, Paper, Scissors - Let's play against the computer!
+/*
+Do the following:
+1. Create a new variable that randomly generates the computer's choice, this must not be done inside the function
+2. Use Math.random to determine the computer's choice (Math.random gives a random number between 0 and 1)
+3. Make a conditional that changes the variable to "rock", "paper", or "scissors" based on it's random number
+
+Use the game function below to do the following:
+1. Receive 2 parameters: a string with the user's choice of "rock", "paper", or "scissors" 
+   and the computer's choice of "rock", "paper", or "scissors".
+   Note: make sure the strings are all lower case or it will not pass the test
+2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match these strings below exactly.
+ - win should return "you win!"
+ - lose should return "you lose!"
+ - tie should return "it's a tie"
+
+RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
+*/
+
+let computer= Math.random();
+if(computer <= 0.34){
+  computer="rock";
+} else if (computer<=0.67){
+  computer="paper";
+} else if (computer>0.67){
+  computer="scissors";
+}
+
+function game(user, computer){
+if (user === computer){
+  return "it's a tie";
+}else if (user === "rock" && computer==="scissors"){
+return "you win!"
+}else if (user === "paper" && computer==="rock"){
+  return "you win!"
+}else if (user === "scissors" && computer === "paper"){
+  return "you win!"
+} else {
+  return "you lose!"
+}
+
+}
+
 
 
 
@@ -210,7 +225,7 @@ Using the miles function below do the following:
 
 function miles(km/*add your code here*/){
   /*add your code here*/
-  let kmtomiles = km*0.621371;
+return km*0.621371;
   console.log(kmtomiles);
 }
 
@@ -224,8 +239,7 @@ Using the feet function below do the following:
 
 function feet(cm/*add your code here*/){
   /*add your code here*/
-  let cmtofeet= cm*0.0328084
-  console.log(cmtofeet)
+ return cm/30.48
 }
 
 
@@ -244,29 +258,14 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(bottleamount/*add your code here*/){
-      /*add your code here*/
-      let bottles;
-for (counter = bottleamount; counter >= 1; counter = counter - 1) 
-{
-    if (counter == 1) {
-        bottles = 'bottle';
-    } else {
-        bottles = 'bottles';
-    }
-    console.log(counter+" "+bottles+" of beer on the wall.");
-    if (counter < 99) {
-        console.log("");
-        console.log(counter+" "+bottles+" of beer on the wall.");
-    }
-    console.log(counter+" "+bottles+" of beer.");
-    console.log("Take one down.");
-    console.log("Pass it around.");
-    if (counter == 1) {
-        console.log("No bottles of beer on the wall.");
-    }
+function annoyingSong(number){
+  for (let i= number; i>0; i--){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;
+}    
 }
-}
+
+console.log(annoyingSong(10))
+
 
 
 
@@ -285,20 +284,19 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(gradevalue/*Your Code here */){
-/*Your Code here */
-if (gradevalue>=90){
-   console.log("you got an A");}
-  else if (gradevalue>=80 && gradevalue<=89){
-   console.log("you got an B");}
-  else if (gradevalue>=70 && gradevalue<=79){
-   console.log("you got an C");}
-  else if (gradevalue>=60 && gradevalue<=69){
-   console.log("you got an C");}
-  else if (gradevalue>=50 && gradevalue<=59){
-   console.log("you got an D");}
-  else {console.log("you got an F");}
-}
+function grade(gradevalue){
+  if (gradevalue>=90){
+     return "you got an A";}
+    else if (gradevalue>=80 && gradevalue<=89){
+     return "you got a B";}
+    else if (gradevalue>=70 && gradevalue<=79){
+     return "you got a C";}
+    else if (gradevalue>=60 && gradevalue<=69){
+     return "you got a D";}
+    else {return "you got an F";}
+  }
+  
+  console.log(grade(55));
 
 
 
